@@ -5,9 +5,200 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url("https://media.gq-magazine.co.uk/photos/654e027e967b74961df08d66/3:2/w_1620,h_1080,c_limit/Albums_09_11_23.jpg");
+  background-size: cover;
+  background-attachment: fixed;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.nav {
+  background: black;
+  height: 70px;
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav-title{
+  color: white;
+  margin-right: 15rem;
+}
+.search-container input {
+  height: 43px;
+  width: 600px;
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px;
+  border: none;
+  font-size: 16px;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+.search-container {
+  position: relative;
+}
+.search-btn {
+  background-color: orange;
+  height: 3rem;
+  width: 4rem;
+  margin-right: 14rem;
+}
+.main {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 30px;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+.album-card {
+  background: #e5dcde;
+  padding: 1rem;
+  border: none;
+  border-radius: 3px;
+  box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #f1f1f1;
+  display: flex;
+  opacity: 0.9;
+}
+.album-card:not(:first-child) {
+  margin-top: 20px;
+}
+.album-card:last-child {
+  margin-bottom: 50px;
+}
+.album-card .left {
+  flex: 1;
+}
+.album-card .left img {
+  height: 150px;
+}
+.album-card .right {
+  position: relative;
+  flex: 10;
+}
+.album-card .id {
+  padding: 10px 20px;
+  font-size: 25px;
+  font-weight: 600;
+}
+.album-card .title {
+  margin-top: 10px;
+  padding: 0 20px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px 20px;
+  box-sizing: border-box;
+}
+.footer .userId {
+  font-size: 20px;
+  font-weight: 600;
+}
+.footer button {
+  font-size: 15px;
+  padding: 7px 10px;
+  text-shadow: none;
+  border-radius: 3px;
+  border: none;
+  font-weight: 600;
+}
+.footer-btn{
+  display: flex;
+  gap: 8px;
+}
+.update-btn {
+  background-color: #eebb13;
+  color: #fff;
+}
+.delete-btn {
+  background-color: red;
+  color: #fff;
+}
+.addAlbumBtn {
+  padding: 10px;
+  display: flex;
+  justify-content: end;
+  margin-right: 20px;
+}
+.addAlbumBtn button {
+  background-color: #1174c0;
+  color: white;
+  font-size: 20px;
+  padding: 7px 10px;
+  text-shadow: none;
+  border-radius: 3px;
+  border: none;
+  font-weight: 800;
+}
+
+/* Modal container */
+.modal-open {
+  display: block; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.4); /* Black with transparency */
+}
+
+.modal-close {
+  display: none;
+}
+
+/* Modal content */
+.modal-content {
+  align-items: center;
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%; /* Could be more or less, depending on your design */
+}
+
+/* Label style */
+.modal-content label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+/* Input style */
+.modal-content input,
+.modal-content textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.modal-content button {
+  background-color: green;
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 7px;
+  width: 80%;
+  margin-left: 4rem;
+}
+
+/* Close button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }
